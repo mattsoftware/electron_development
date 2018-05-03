@@ -1,0 +1,29 @@
+{
+  "name": "electron_development",
+  "version": "1.0.0",
+  "description": "Base Electron Project For Development",
+  "main": "electron/electron.js",
+  "author": "Matt Paine <matt@mattsoftware.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rm -fr dist build",
+    "electron": "electron .",
+    "dist": "yarn dist:pi",
+    "dist:pi": "electron-builder --linux AppImage --armv7l"
+  },
+  "devDependencies": {
+    "electron-builder": "^20.3.1",
+    "electron": "1.7.9"
+  },
+  "build": {
+    "appId": "com.mattsoftware.electron_development",
+    "productName": "Electron Builder",
+    "copyright": "Copyright © 2018 Matt Paine <matt@mattsoftware.com>",
+    "appImage": {
+      "systemIntegration": "doNotAsk"
+    },
+    "snap": null,
+    "extends": null
+  }
+}
